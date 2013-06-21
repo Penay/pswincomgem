@@ -39,6 +39,7 @@ module PSWinCom
         m.SERVICECODE args[:servicecode] if args[:servicecode]
         m.RCPREQ 'Y' if args[:rcpreq] == true
         m.DELIVERYTIME args[:deliverytime].strftime(TIME_FORMAT) if args.include? :deliverytime
+	m.OP 9	
       end
   end
 end
